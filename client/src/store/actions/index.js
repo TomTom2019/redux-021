@@ -13,3 +13,15 @@ export const articleList = () => {
     ],
   };
 };
+
+// CREATE DATA
+export const articleData = () => {
+  return {
+    type: "ARTICLE_DATA",
+    payload: {
+      id: 1,
+      title: "React redux",
+      year: 2020,
+    },
+  };
+};

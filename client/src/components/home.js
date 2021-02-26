@@ -27,7 +27,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { article: state.article };
+  return { article: state.data };
 };
 
 export default connect(mapStateToProps)(Home);
