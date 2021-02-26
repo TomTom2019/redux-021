@@ -7,7 +7,7 @@
 export default function appReducer(state = {}, action) {
   switch (action.type) {
     case "ARTICLE_LIST":
-      return action.payload;
+      return { ...state, articleList: action.payload };
 
     default:
       return state;
