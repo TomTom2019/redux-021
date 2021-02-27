@@ -3,9 +3,11 @@
 //2 YOU CONNECT
 //3 YOU DISPATCH
 //4 GO TO REDUCER AND GET THE DATA
+import { ARTICLE_LIST, ARTICLE_DATA } from "../types";
+
 export const articleList = () => {
   return {
-    type: "ARTICLE_LIST",
+    type: ARTICLE_LIST,
     payload: [
       { id: 1, title: "Hello1" },
       { id: 2, title: "Hello2" },
@@ -17,7 +19,7 @@ export const articleList = () => {
 // CREATE DATA
 export const articleData = () => {
   return {
-    type: "ARTICLE_DATA",
+    type: ARTICLE_DATA,
     payload: {
       id: 1,
       title: "React redux",
