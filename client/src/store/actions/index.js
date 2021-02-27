@@ -3,7 +3,19 @@
 //2 YOU CONNECT
 //3 YOU DISPATCH
 //4 GO TO REDUCER AND GET THE DATA
-import { ARTICLE_LIST, ARTICLE_DATA } from "../types";
+import { ARTICLE_LIST, ARTICLE_DATA, GET_USER } from "../types";
+import axios from "axios";
+
+export const getUser = () => {
+  const request = axios.get(`/api/getarticle`).then((response) => {
+    return response.data;
+  });
+
+  return {
+    type: GET_USER,
+    payload: request,
+  };
+};
 
 export const articleList = () => {
   return {

@@ -3,15 +3,18 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { articleList } from "../store/actions";
+import { articleList, getUser } from "../store/actions";
 
 class Home extends Component {
   getarticleHandler() {
     this.props.dispatch(articleList());
   }
 
+  getUserHandler() {
+    this.props.dispatch(getUser());
+  }
+
   render() {
-    console.log(this.props);
     const { article } = this.props;
     return (
       <>
@@ -21,6 +24,7 @@ class Home extends Component {
             ))
           : null}
         <button onClick={() => this.getarticleHandler()}>Get Articles</button>
+        <button onClick={() => this.getUserHandler()}>Get User</button>
       </>
     );
   }
